@@ -88,9 +88,13 @@ python run.py --img_path INPUT_IMG --half_precision
 ```
 #### Step 2: Perform Image Synthesis
 ```bash
-python NaPa.py --one-2-3-4-5_output ./output/3d_results
+python NaPa.py\
+    --path ./input_images \
+    --prompts "Spaceship over the white screen.>Spaceship in the city.,Spaceship over the white screen.>Spaceship in the sky." \
+    --output ./results \
+    --seed 123456789
 ```
 #### Step 3: Forgery Detection
 ```bash
-python Explicit-Visual-Prompt/run.py
+python Explicit-Visual-Prompt/forgery_detection.py --input_path  
 ```
